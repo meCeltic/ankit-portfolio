@@ -153,12 +153,13 @@
 
     <article class="ch" data-ch="1" aria-labelledby="ch1">
       <p class="ch__meta"><b>Web front-end</b><span>STEMMED Edvocations, 2025</span></p>
-      <h3 id="ch1" class="ch__h" tabindex="-1">Front-end for STEM learning.</h3>
-      <p class="ch__p">Front-end engineer at a STEM EdTech startup, building educational tools with a remote team.</p>
+      <h3 id="ch1" class="ch__h" tabindex="-1">A course store for STEM learning.</h3>
+      <p class="ch__p">Front-end engineer at a STEM EdTech startup: an e-commerce-style React site where people browse and buy courses.</p>
       <details class="more">
         <summary><span>More</span><i class="pm" aria-hidden="true"></i></summary>
         <div class="more__body"><ul>
-          <li>Interfaces for educational tools and digital product prototypes for STEM learning.</li>
+          <li>Course listings and an application and purchase flow, built in React.</li>
+          <li>Integrated an AWS-hosted database and a payment gateway, plus a chatbot that helps people find the right course.</li>
           <li>Remote team based in Bhubaneswar, February to May 2025.</li>
         </ul></div>
       </details>
@@ -167,15 +168,15 @@
     <article class="ch" data-ch="2" aria-labelledby="ch2">
       <p class="ch__meta"><b>Mobile + 3D</b><span>Omvad (Ramai), 2025</span></p>
       <h3 id="ch2" class="ch__h" tabindex="-1">A virtual clone of your body.</h3>
-      <p class="ch__p">A React Native health app for iOS and Android: medical reports, body metrics, wearables and 3D body models that stay smooth.</p>
+      <p class="ch__p">I built the entire React Native health app, iOS and Android: medical reports, body metrics, wearables and 3D body models that stay smooth.</p>
       <details class="more">
         <summary><span>More</span><i class="pm" aria-hidden="true"></i></summary>
         <div class="more__body"><ul>
           <li>Built the entire Expo front-end and the FastAPI backend myself, June to August 2025 in Gurugram.</li>
           <li>Worked closely with the designers and implemented their screens.</li>
           <li>Imported many 3D models of the body and tuned the animations and interactions to run smoothly on phones.</li>
-          <li>Centralises medical reports, history and body metrics; pulls health data from smartwatches.</li>
-          <li>FastAPI AI chatbot for real-time health insights.</li>
+          <li>Keeps medical reports, history and body metrics in one place, and syncs Apple Health, Apple Watch, Google Fit, Fitbit and other wearables.</li>
+          <li>An AI assistant that knows the user's full health profile and answers health questions.</li>
         </ul></div>
       </details>
     </article>
@@ -183,14 +184,13 @@
     <article class="ch" data-ch="3" aria-labelledby="ch3">
       <p class="ch__meta"><b>Backend</b><span>Comviva, 2025-now</span></p>
       <h3 id="ch3" class="ch__h" tabindex="-1">Backend at telecom scale.</h3>
-      <p class="ch__p">I joined Comviva to go deep on backend. I work on the services that decide which products, promotions and recommendations a customer qualifies for.</p>
+      <p class="ch__p">I joined Comviva to go deep on backend. I work on the services that decide which products, promotions and recommendations a customer qualifies for. I also traced a critical iPhone-launch checkout slowdown to its root.</p>
       <details class="more">
         <summary><span>More</span><i class="pm" aria-hidden="true"></i></summary>
         <div class="more__body"><ul>
+          <li><b>Critical incident, iPhone launch:</b> checkout timed out at 180 s. Thread and heap dumps led me to unbounded async work; a bounded pool fixed it. Release validation pending.</li>
           <li>Java 21, Spring Boot 3.5, multi-module Gradle, gRPC to the rule engine, Kafka catalog events, MongoDB.</li>
-          <li>Qualification services (POQ, PRQ, REQ): 258 commits and 78 Jira tickets, Oct 2025 to Sep 2026.</li>
-          <li>Recommendation service: 45 commits, 15 tickets.</li>
-          <li>Multi-IdP support, Kafka auth in the common library, a POQ Helm deployment fix, release drops, CBOM and Trivy upgrades.</li>
+          <li>90+ features and production fixes across 3 releases, including multi-version catalogue support, multi-IdP sign-in, Kafka auth, a Helm deployment fix and CBOM and Trivy upgrades.</li>
           <li>I maintain the error-code catalogue, about 212 codes.</li>
         </ul></div>
       </details>
@@ -199,14 +199,15 @@
     <article class="ch" data-ch="4" aria-labelledby="ch4">
       <p class="ch__meta"><b>Agents</b><span>Comviva</span></p>
       <h3 id="ch4" class="ch__h" tabindex="-1">Agents inside the SDLC.</h3>
-      <p class="ch__p">With senior engineers, AI architects and leadership, I bring agentic AI into the SDLC and build internal agents for all employees across the company.</p>
+      <p class="ch__p">With senior engineers, AI architects and leadership, I helped build AI Assets, the company's app where anyone can publish, find and run AI agents. I built its dashboard and browsing panel, and I run my own agent fleet for bug triage.</p>
       <details class="more">
         <summary><span>More</span><i class="pm" aria-hidden="true"></i></summary>
         <div class="more__body"><ul>
+          <li>AI Assets runs on the web and inside VS Code, with about 316 shared agents, skills, plugins and templates. I built its dashboard and browsing panel, keeping 4,519 tests green.</li>
           <li>My own fleet: a master agent plus 14 specialists, with a permanent mission log (93 missions, 610 logged steps since Aug 2026), verification gates and a Sonnet, Opus, Fable escalation ladder.</li>
           <li>A Kubernetes deploy failure traced to a two-space YAML dedent in 4.8 minutes; the fix was whitespace-only.</li>
           <li>Team showcase: about 12 hours of estimated manual investigation, done in 45.7 measured minutes.</li>
-          <li>Developer Utils (VS Code): one-click AI log analysis. I also redesigned its BM AI Assets dashboard tab, keeping 4,519 tests green.</li>
+          <li>Developer Utils, the team's VS Code extension: one-click AI log analysis.</li>
         </ul></div>
       </details>
     </article>
@@ -217,11 +218,14 @@
 <section class="work" id="work" aria-labelledby="work-h">
   <h2 id="work-h">Selected work</h2>
   <ol class="work__list">
-    <li class="row"><span class="row__name">bababhandar.in</span><span class="row__tag">web</span><span class="row__d">Mobile-first site for a family sweet shop.</span><a class="row__go" href="https://bababhandar.in" rel="noopener">Visit<span class="vh"> bababhandar.in</span></a></li>
-    <li class="row"><span class="row__name">Omvad health app</span><span class="row__tag">mobile + 3D</span><span class="row__d">Expo app with 3D body models, iOS and Android.</span><a class="row__go row__go--ask" href="mailto:ankit.singh.work2024@gmail.com?subject=Omvad%20app">Private, ask me<span class="vh"> about the Omvad app</span></a></li>
-    <li class="row"><span class="row__name">Qualification services</span><span class="row__tag">backend</span><span class="row__d">Spring Boot services behind POQ, PRQ and REQ.</span><a class="row__go row__go--ask" href="mailto:ankit.singh.work2024@gmail.com?subject=Qualification%20services">Private, ask me<span class="vh"> about the qualification services</span></a></li>
-    <li class="row"><span class="row__name">Agent fleet</span><span class="row__tag">agents</span><span class="row__d">Master agent, 14 specialists, 93 logged missions.</span><a class="row__go row__go--ask" href="mailto:ankit.singh.work2024@gmail.com?subject=Agent%20fleet">Private, ask me<span class="vh"> about the agent fleet</span></a></li>
-    <li class="row"><span class="row__name">VireoCast</span><span class="row__tag">agents</span><span class="row__d">A Shorts channel that runs itself, $0 a month.</span><a class="row__go" href="https://youtube.com/shorts/erX2WwWVbaM" rel="noopener">First short<span class="vh">, VireoCast on YouTube</span></a></li>
+    <li class="row"><span class="row__name">Qualification services</span><span class="row__tag">backend</span><span class="row__d">Spring Boot services deciding which offers each customer gets.</span><a class="row__go row__go--ask" href="mailto:ankit.singh.work2024@gmail.com?subject=Qualification%20services">Private, ask me<span class="vh"> about the qualification services</span></a></li>
+    <li class="row"><span class="row__name">AI Assets</span><span class="row__tag">agents</span><span class="row__d">Company app to publish, find and run AI agents. I built its dashboard.</span><a class="row__go row__go--ask" href="mailto:ankit.singh.work2024@gmail.com?subject=AI%20Assets">Private, ask me<span class="vh"> about AI Assets</span></a></li>
+    <li class="row"><span class="row__name">Stock Trend Tracker</span><span class="row__tag">backend</span><span class="row__d">Spring Boot scheduled jobs, JPA and REST feeding a React price chart.</span><a class="row__go" href="https://github.com/meCeltic/stock-trend-tracker" rel="noopener">Code<span class="vh"> Stock Trend Tracker source code</span></a></li>
+    <li class="row"><span class="row__name">FletNix</span><span class="row__tag">full-stack</span><span class="row__d">Express and MongoDB API with JWT auth, 8,800+ titles, Playwright tests.</span><a class="row__go" href="https://github.com/meCeltic/fletnix-netflix-clone" rel="noopener">Code<span class="vh"> FletNix source code</span></a></li>
+    <li class="row"><span class="row__name">Bookmark-AI</span><span class="row__tag">web</span><span class="row__d">Next.js and Supabase Postgres bookmark app with AI summaries.</span><span class="row__links"><a class="row__go" href="https://bookmark-ai-beta.vercel.app" rel="noopener">Live<span class="vh"> Bookmark-AI live site</span></a><a class="row__go" href="https://github.com/meCeltic/Bookmark-AI" rel="noopener">Code<span class="vh"> Bookmark-AI source code</span></a></span></li>
+    <li class="row"><span class="row__name">PowerPDF</span><span class="row__tag">web</span><span class="row__d">Chat-with-PDF SaaS: OpenAI, Pinecone and Stripe.</span><span class="row__links"><a class="row__go" href="https://powerpdf.vercel.app" rel="noopener">Live<span class="vh"> PowerPDF live site</span></a><a class="row__go" href="https://github.com/meCeltic/Power-pdf" rel="noopener">Code<span class="vh"> PowerPDF source code</span></a></span></li>
+    <li class="row"><span class="row__name">VireoCast</span><span class="row__tag">agents</span><span class="row__d">Shorts pipeline that runs itself: Python, FastAPI, GitHub Actions.</span><a class="row__go" href="https://vireo-cast.vercel.app/" rel="noopener">Live<span class="vh"> VireoCast dashboard</span></a></li>
+    <li class="row"><span class="row__name">bababhandar.in</span><span class="row__tag">web</span><span class="row__d">Live site for a family sweet shop.</span><a class="row__go" href="https://bababhandar.in" rel="noopener">Visit<span class="vh"> bababhandar.in</span></a></li>
   </ol>
 </section>
 

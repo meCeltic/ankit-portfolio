@@ -175,6 +175,10 @@ main:focus{outline:none}
 .row__go::before{content:"\2197";display:inline-block;margin-right:.4rem;transition:transform .35s var(--ease-out)}
 .row__go--ask{color:var(--mute)}
 .row__go--ask::before{content:"\2709"}
+.row__go--off{color:var(--mute)}
+.row__go--off::before,.row__go--off::after{content:none}
+.row__links{justify-self:end;display:inline-flex;gap:1rem}
+.row__links .row__go{justify-self:auto}
 .row:hover .row__go::before{transform:translate(2px,-2px)}
 
 /* ---------- path ---------- */
@@ -249,7 +253,7 @@ main:focus{outline:none}
   .layers__h{padding-top:2.2rem;margin-bottom:1.25rem}
   .ch{min-height:auto;padding:3.2rem 0;border-top:1px solid var(--line);scroll-margin-top:calc(var(--strip) + 10px)}
   .row{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"n go" "t t" "d d";gap:.3rem 1rem}
-  .row__name{grid-area:n}.row__tag{grid-area:t}.row__d{grid-area:d}.row__go{grid-area:go}
+  .row__name{grid-area:n}.row__tag{grid-area:t}.row__d{grid-area:d}.row__go,.row__links{grid-area:go}
   .path{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:767px){.ctas__quiet{margin-left:.6rem}}
@@ -269,7 +273,7 @@ main:focus{outline:none}
   .top ul{gap:1rem}
   .path__t{font-size:.8125rem}
   .path__t th,.path__t td{padding-right:.8rem}
-  .row__go--ask{font-size:.75rem}
+  .row__go--ask,.row__go--off{font-size:.75rem}
 }
 
 /* ---------- reduced motion: keep fades and colour, drop movement ---------- */
