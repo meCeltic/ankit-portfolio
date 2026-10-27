@@ -183,15 +183,15 @@
 
     <article class="ch" data-ch="3" aria-labelledby="ch3">
       <p class="ch__meta"><b>Backend</b><span>Comviva, 2025-now</span></p>
-      <h3 id="ch3" class="ch__h" tabindex="-1">Now I'm at Comviva, mostly on Java&nbsp;services.</h3>
-      <p class="ch__p">I wanted to get properly good at backend, so I joined Comviva. I work on the services that decide which products, promotions and recommendations a customer qualifies for. During an iPhone launch I traced a checkout slowdown, priority Critical, to its root&nbsp;cause.</p>
+      <h3 id="ch3" class="ch__h" tabindex="-1">At Comviva, I found why checkouts hung in an iPhone&nbsp;launch.</h3>
+      <p class="ch__p">I joined Comviva to get properly good at backend. I work on three Java services that decide which offers, promotions and recommendations a telecom customer qualifies for. When an operator launched the iPhone 18, one of them pinned its CPU and checkout calls timed out at 180 seconds, while the logs showed only 200 OK. The cause was 14 background tasks stuck on Java's tiny default thread&nbsp;pool.</p>
       <details class="more">
         <summary><span>More</span><i class="pm" aria-hidden="true"></i></summary>
         <div class="more__body"><ul>
-          <li><b>The iPhone launch bug (Critical priority):</b> checkout was timing out at 180 s. Thread and heap dumps pointed me to async work with no upper limit, and a bounded pool fixed it.</li>
-          <li>Day to day it is Java 21, Spring Boot 3.5, multi-module Gradle, gRPC to the rule engine, Kafka catalog events and MongoDB.</li>
-          <li>Across 3 releases I've done 90+ features and production fixes. A few of them were multi-version catalogue support, multi-IdP sign-in, Kafka auth, a Helm deployment fix, and CBOM and Trivy upgrades.</li>
-          <li>I look after the error-code catalogue, which has about 212 codes.</li>
+          <li><b>The iPhone launch bug (Critical):</b> logs were clean, so I read thread and heap dumps with my own parser, as no Mac tool opened them. 14 async calls ran on commonPool, the shared pool every Java app gets by default, which had 1 or 2 threads. A bounded pool fixed it. Test runs before and after matched.</li>
+          <li>Day to day it's Java 21 and Spring Boot 3.5 in a multi-module Gradle build, with gRPC calls to the rule engine, Kafka events whenever the catalogue changes, and MongoDB.</li>
+          <li><b>90+ features and fixes over 3 releases:</b> my own feature was multi-version catalogue support, where promotion checks pass each product's version to the rule engine and old data gets backfilled. I also did multi-IdP sign-in, Kafka auth, a Helm deployment fix and CBOM and Trivy upgrades.</li>
+          <li>I maintain the error-code catalogue for these services. It has about 212 codes now, like BMCOM_POQ_40401.</li>
         </ul></div>
       </details>
     </article>
@@ -199,11 +199,11 @@
     <article class="ch" data-ch="4" aria-labelledby="ch4">
       <p class="ch__meta"><b>Agents</b><span>Comviva</span></p>
       <h3 id="ch4" class="ch__h" tabindex="-1">I also work on AI agents at Comviva.</h3>
-      <p class="ch__p">I helped build AI Assets along with senior engineers, AI architects and leadership. It's the company app where anyone can publish, find and run AI agents. I built the dashboard and the browsing panel, and I also wrote agents, skills, tools and MCP servers for the hub. Separately, I run my own agent fleet for bug&nbsp;triage.</p>
+      <p class="ch__p">I helped build AI Assets along with senior engineers, AI architects and leadership. It's the company app where anyone can publish, find and run AI agents. My part was the dashboard and the browsing panel, and I also wrote agents, skills, tools and MCP servers for the hub. Separately, I run my own agent fleet for bug&nbsp;triage.</p>
       <details class="more">
         <summary><span>More</span><i class="pm" aria-hidden="true"></i></summary>
         <div class="more__body"><ul>
-          <li>AI Assets works on the web and inside VS Code, and holds about 316 shared agents, skills, plugins and templates. While building the dashboard and browsing panel I kept the 4,519 tests green. The agents and MCP servers I wrote sit in that same catalogue.</li>
+          <li>AI Assets works on the web and inside VS Code, and holds about 316 shared agents, skills, plugins and templates. While building the dashboard and browsing panel I kept the 4,519 tests green.</li>
           <li>My own fleet is a master agent and 14 specialists. It keeps a permanent mission log (93 missions, 610 logged steps since Aug 2026), has verification gates, and escalates from Sonnet to Opus to Fable when it gets stuck.</li>
           <li>Once it traced a Kubernetes deploy failure to a two-space YAML dedent in 4.8&nbsp;minutes. The fix was only whitespace.</li>
           <li>For a team showcase, work estimated at about 12 hours of manual investigation took 45.7 measured minutes.</li>
