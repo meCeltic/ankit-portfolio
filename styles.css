@@ -81,6 +81,13 @@ main:focus{outline:none}
 .cta__ic{display:grid;place-items:center;width:2.3rem;height:2.3rem;border-radius:50%;background:var(--bg);color:var(--ink);transition:transform .35s var(--ease-out)}
 .cta__ic svg{width:.95rem;height:.95rem;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
 .cta--primary:hover .cta__ic{transform:translate(2px,-2px) scale(1.06)}
+/* Venom CTA (venom.js): one plain canvas per primary CTA, absolutely placed in its list and layered above the section's text and buttons */
+.venom-host{position:relative}
+.venom{position:absolute;z-index:5;pointer-events:none}
+.cta--venom{box-shadow:inset 0 1px 0 rgba(255,255,255,.14)}
+.cta--venom:hover{background:var(--ink);border-color:var(--ink)}
+.cta--venom .cta__ic{transition:transform .35s var(--ease-out),background-color .1s,color .1s}
+.cta--venom:hover .cta__ic,.cta--venom.is-caught .cta__ic{background:var(--acc);color:#fff;transform:translate(2px,-2px) scale(1.06)}
 
 /* ---------- the stage: five isometric planes ---------- */
 .stage{position:sticky;top:0;height:100svh;display:grid;place-items:center}
