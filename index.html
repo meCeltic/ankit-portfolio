@@ -184,13 +184,13 @@
     <article class="ch" data-ch="3" aria-labelledby="ch3">
       <p class="ch__meta"><b>Backend</b><span>Comviva, 2025-now</span></p>
       <h3 id="ch3" class="ch__h" tabindex="-1">At Comviva, I found why checkouts hung in an iPhone&nbsp;launch.</h3>
-      <p class="ch__p">I joined Comviva to get properly good at backend. At the iPhone 18 launch, checkouts timed out at 180&nbsp;seconds while logs said 200&nbsp;OK. I found the thread&#8209;pool&nbsp;cause.</p>
+      <p class="ch__p">I joined Comviva to get properly good at backend. At the iPhone 18 launch, checkouts timed out at 180&nbsp;seconds while logs said 200&nbsp;OK. The thread pool was far too&nbsp;small.</p>
       <details class="more">
         <summary><span>More</span><i class="pm" aria-hidden="true"></i></summary>
         <div class="more__body"><ul>
           <li><b>The iPhone launch bug (Critical):</b> when an operator launched the iPhone 18, one service pinned its CPU. Logs were clean, so I read the thread dumps, and the heap dumps with a parser I wrote because no Mac tool could open them.</li>
           <li>14 background tasks were stuck on commonPool, Java&#8217;s tiny default thread pool, which had 1 or 2 threads. Giving them their own pool of 8 to 16 threads with a capped queue fixed it. The full test suite gave the same results before and after, so nothing else broke.</li>
-          <li>I work on three Java services that decide which offers, promotions and recommendations a telecom customer qualifies for. Day to day it&#8217;s Java 21 and Spring Boot 3.5 in a multi-module Gradle build, with gRPC calls to the rule engine, Kafka events whenever the catalogue changes, and MongoDB.</li>
+          <li>I work on three Java services that decide which products, promotions and recommendations a telecom customer qualifies for. Day to day it&#8217;s Java 21 and Spring Boot 3.5 in a multi-module Gradle build, with gRPC calls to the rule engine, Kafka events whenever the catalogue changes, and MongoDB.</li>
           <li><b>90+ features and fixes over 3 releases:</b> my own feature was multi-version catalogue support, where promotion checks pass each product&#8217;s version to the rule engine and old data gets backfilled. I also did multi-IdP sign-in, Kafka auth, a Helm deployment fix and CBOM and Trivy upgrades.</li>
           <li>I maintain the error-code catalogue for these services. It has about 212 codes now, like BMCOM_POQ_40401.</li>
         </ul></div>
